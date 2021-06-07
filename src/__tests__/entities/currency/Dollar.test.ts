@@ -4,6 +4,6 @@ describe("Dollar test", () => {
   test("times", () => {
     const dollar = new Dollar(10);
     const result = dollar.times(10);
-    expect(result).toBe(100);
+    expect(result).toStrictEqual(new Dollar(100));
   });
 });
