@@ -1,4 +1,4 @@
-import { Dollar } from "../../../entities/currency/Dollar";
+import { Dollar } from "../../../TDD/currency/Dollar";
 
 describe("Dollar test", () => {
   test("times", () => {
