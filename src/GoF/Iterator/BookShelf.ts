@@ -15,6 +15,11 @@ export class BookShelf implements Aggregate {
   }
 
   public appendBook(book: Book): void {
+    if (this.last === this.books.length) {
+      throw new Error(
+        `Error! This book can not be appended. Book name is ${book.getName()}.`
+      );
+    }
     this.books[this.last] = book;
     this.last++;
   }
