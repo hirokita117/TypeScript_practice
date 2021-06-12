@@ -1,16 +1,22 @@
-import { BookShelf } from './BookShelf';
-import { Iterator } from './Iterator';
+import { BookShelf } from "./BookShelf";
+import { Iterator } from "./Iterator";
 
 export class BookShelfIterator implements Iterator {
-  public constructor (
-    private bookShelf: BookShelf,
-  ) {}
+  private bookShelf: BookShelf;
+  private index: number;
 
-  public hasNext () {
-    return true;
+  public constructor(bookShelf: BookShelf) {
+    this.bookShelf = bookShelf;
+    this.index = 0;
   }
 
-  public next () {
-    return {};
+  public hasNext(): boolean {
+    return this.index < this.bookShelf.getLength();
+  }
+
+  public next() {
+    const book = this.bookShelf.getBookAt(this.index);
+    this.index++;
+    return book;
   }
 }

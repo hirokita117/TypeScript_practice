@@ -1,9 +1,7 @@
 export class Book {
-  public constructor (
-    private name: string
-  ) {}
+  public constructor(private name: string) {}
 
-  public getName() {
+  public getName(): string {
     return this.name;
   }
 }
