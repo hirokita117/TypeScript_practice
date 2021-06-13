@@ -5,12 +5,6 @@ import { State } from "./State";
 export class SafeFrame implements Context {
   private state: State = DayState.getInstance();
 
-  /*
-  public constructor(
-    private title: string,
-  ) {}
-  */
-
   public setClock(hour: number) {
     let clockString = "現在時刻は";
     if (hour < 10) {
