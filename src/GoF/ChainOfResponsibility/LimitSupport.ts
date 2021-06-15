@@ -8,11 +8,6 @@ export class LimitSupport extends Support {
   }
 
   protected resolve(trouble: Trouble) {
-    /*
-    console.log(this.toString());
-    console.log(this.limit);
-    console.log(trouble.getNumber() < this.limit);
-    */
     return trouble.getNumber() < this.limit;
   }
 }

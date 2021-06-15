@@ -25,7 +25,7 @@ export abstract class Support {
   }
 
   protected done(trouble: Trouble) {
-    console.log(`${trouble} is resolved by ${this.name}`);
+    console.log(`${trouble} is resolved by ${this}`);
   }
 
   protected fail(trouble: Trouble) {
