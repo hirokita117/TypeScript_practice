@@ -1,3 +1,4 @@
+import { Clock } from "./Clock";
 import { Context } from "./Context";
 import { DayState } from "./DayState";
 import { State } from "./State";
@@ -19,6 +20,15 @@ export class SafeFrame implements Context {
   public changeState(state: State) {
     console.log(`${this.state}から${state}へ状態が変化しました`);
     this.state = state;
+  }
+
+  public setCallCenter(hour: number) {
+    if (Clock.isNightTime(hour)) {
+      this.state.doAlarm(this);
+      this.state.doUse(this);
+      return;
+    }
+    this.state.doPhone(this);
   }
 
   public callSecurityCenter(msg: string) {
