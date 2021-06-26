@@ -4,4 +4,8 @@ export class Dollar {
   public times(multiplier: number) {
     return new Dollar(multiplier * this.amount);
   }
+
+  public equals(dollar: Dollar): boolean {
+    return this.amount === dollar.amount;
+  }
 }
