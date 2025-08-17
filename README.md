@@ -1,6 +1,6 @@
 # TypeScript_practice
-TypeScriptの練習と言いつつ、  
-TDD写経, GoFのデザインパターン写経もする
+TypeScriptの練習  
+（TDD写経, GoFのデザインパターン写経もついでに。）
 
 # 環境構築
 ```
